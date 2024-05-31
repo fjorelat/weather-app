@@ -1,13 +1,76 @@
 body {
-  background-color: rgb(224, 239, 244);
+  background-color: #f9f7fe;
   font-family: "Dancing Script", cursive;
 }
 
+a {
+  color: #9878e7;
+}
+
 .app {
-  background-color: white;
+  background-color: rgb(253, 254, 255);
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+header {
+  border-bottom: 1px solid #c8b5f7;
+  padding: 0 0 30px 0;
+}
+
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 75%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background-color: #9878e7;
+  width: 20%;
+  color: white;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-left: 15px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+main {
+  padding: 30px 0;
+}
+
+.app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.app-details {
+  font-size: 16px;
+  line-height: 20px;
+  color: #b198f3;
+}
+
+.app-details strong {
+  color: #8e2e8c;
+}
+
+footer {
+  border-top: 1px solid #c8b5f7;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
 }
