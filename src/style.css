@@ -63,7 +63,27 @@ main {
 }
 
 .app-details strong {
-  color: #8e2e8c;
+  color: #c21313;
+}
+
+.app-temp {
+  display: flex;
+}
+
+.app-emoji {
+  font-size: 44px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.app-temp-number {
+  font-size: 84px;
+  font-weight: bold;
+}
+
+.app-unit {
+  margin-top: 16px;
+  font-size: 28px;
 }
 
 footer {
