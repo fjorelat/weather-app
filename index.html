@@ -39,11 +39,18 @@
             <p class="app-details">
               <span id="time"></span> , <span id="description"></span>
               <br />
-              Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
             </p>
           </div>
           <div class="app-temp">
-            <div class="app-emoji">☀️</div>
+            <div class="app-emoji" id="app-emoji">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                class="app-emoji"
+                id="app-emoji"
+              />
+            </div>
             <div class="app-temp-number" id="temperature"></div>
             <div class="app-unit">°C</div>
           </div>
