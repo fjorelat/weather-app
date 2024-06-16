@@ -18,6 +18,8 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"
                 class="app-emoji"
               />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -58,7 +60,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "ff1abb1045b3665675062f6f00tc644o";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
   let forecastHtml = "";
 
@@ -76,7 +86,7 @@ function displayForecast() {
               </div>`;
   });
 
-   let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -84,4 +94,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Dublin");
+
 displayForecast();
